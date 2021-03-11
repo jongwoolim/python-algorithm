@@ -1,4 +1,4 @@
-#----알파벳 찾
+#----알파벳 찾기
 # def solution():
 #
 #     alpha_count = [0] * 26
@@ -25,7 +25,7 @@
 #         print(value)
 
 
-#----문자열 반
+#----문자열 반복
 # def solution():
 #
 #     case = int(input())
@@ -91,26 +91,35 @@
 #         return print(b_reverse)
 
 #----다이얼
+# def solution():
+#
+#     time_arr = [0] * 10
+#     alpha_dict = {1: '0', 2 : 'ABC', 3: 'DEF', 4: 'GHI', 5: 'JKL', 6: 'MNO', 7 : 'PQRS', 8: 'TUV', 9: 'WXYZ', 10: '9'}
+#
+#     result = 0
+#
+#     for i in range(2, len(time_arr)+2):
+#         time_arr[i-2] = i
+#
+#     print(time_arr)
+#     s = input().upper()
+#
+#     if len(s) < 2 or len(s) > 15:
+#         return
+#
+#     for alpha in s:
+#         for key, value in alpha_dict.items():
+#             if alpha in value:
+#                 result += time_arr[key - 1]
+#     print(result)
+
+#---- 크로아티아 알파벳
 def solution():
+    arr = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
 
-    time_arr = [0] * 10
-    alpha_dict = {1: '0', 2 : 'ABC', 3: 'DEF', 4: 'GHI', 5: 'JKL', 6: 'MNO', 7 : 'PQRS', 8: 'TUV', 9: 'WXYZ', 10: '9'}
-
-    result = 0
-
-    for i in range(2, len(time_arr)+2):
-        time_arr[i-2] = i
-
-    print(time_arr)
-    s = input().upper()
-
-    if len(s) < 2 or len(s) > 15:
-        return
-
-    for alpha in s:
-        for key, value in alpha_dict.items():
-            if alpha in value:
-                result += time_arr[key - 1]
-    print(result)
+    alpha = input()
+    for v in arr:
+        alpha = alpha.replace(v, '*')
+    print(len(alpha))
 solution()
 
