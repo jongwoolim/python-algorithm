@@ -14,6 +14,7 @@ def solution(s):
     for i in range(len(count)):
         if max(count) == count[i]:
             max_count += 1
+
             
     if max_count == 1:
         answer = chr(count.index(max(count))) 
