@@ -69,13 +69,26 @@
 #         print(chr(alpha_count.index(max(alpha_count))).upper())
 
 #----단어 개수
+# def solution():
+#
+#     s = input().split()
+#     result = 0
+#     for _ in s:
+#         result += 1
+#     print(result)
+
+#----상수
 def solution():
 
-    s = input().split()
-    result = 0
-    for _ in s:
-        result += 1
-    print(result)
+    a, b = input().split()
+
+    a_reverse = int(a[::-1])
+    b_reverse = int(b[::-1])
+
+    if a_reverse > b_reverse:
+        return print(a_reverse)
+    else:
+        return print(b_reverse)
 
 solution()
 
