@@ -25,28 +25,49 @@
 #         print(value)
 
 
-#----문자열 반복
+#----문자열 반
+# def solution():
+#
+#     case = int(input())
+#     result = ""
+#
+#     for _ in range(case):
+#         r, s = input().split()
+#
+#         if len(s) <1 or len(s) > 20:
+#             return
+#
+#         num = int(r)
+#
+#         for value in s:
+#             for _ in range(num):
+#                 result += value
+#         result += " "
+#     result_arr = result.split()
+#
+#     for value in result_arr:
+#         print(value)
+
+#----단어공부
 def solution():
 
-    case = int(input())
-    result = ""
+    alpha_count = [0] * 123
+    max_count = 0
+    inputs = input().lower()
 
-    for _ in range(case):
-        r, s = input().split()
+    for value in inputs:
+        alpha_count[ord(value)] += 1
 
-        if len(s) <1 or len(s) > 20:
-            return
+    for i in range(97, 123):
+        if max(alpha_count) == alpha_count[i]:
+            max_count += 1
 
-        num = int(r)
+    if max_count > 1:
+        print('?')
+        return
+    else:
+        print(chr(alpha_count.index(max(alpha_count))).upper())
 
-        for value in s:
-            for _ in range(num):
-                result += value
-        result += " "
-    result_arr = result.split()
-
-    for value in result_arr:
-        print(value)
 solution()
 
 
