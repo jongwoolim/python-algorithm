@@ -49,24 +49,33 @@
 #         print(value)
 
 #----단어공부
+# def solution():
+#
+#     alpha_count = [0] * 123
+#     max_count = 0
+#     inputs = input().lower()
+#
+#     for value in inputs:
+#         alpha_count[ord(value)] += 1
+#
+#     for i in range(97, 123):
+#         if max(alpha_count) == alpha_count[i]:
+#             max_count += 1
+#
+#     if max_count > 1:
+#         print('?')
+#         return
+#     else:
+#         print(chr(alpha_count.index(max(alpha_count))).upper())
+
+#----단어 개수
 def solution():
 
-    alpha_count = [0] * 123
-    max_count = 0
-    inputs = input().lower()
-
-    for value in inputs:
-        alpha_count[ord(value)] += 1
-
-    for i in range(97, 123):
-        if max(alpha_count) == alpha_count[i]:
-            max_count += 1
-
-    if max_count > 1:
-        print('?')
-        return
-    else:
-        print(chr(alpha_count.index(max(alpha_count))).upper())
+    s = input().split()
+    result = 0
+    for _ in s:
+        result += 1
+    print(result)
 
 solution()
 
