@@ -78,19 +78,39 @@
 #     print(result)
 
 #----상수
+# def solution():
+#
+#     a, b = input().split()
+#
+#     a_reverse = int(a[::-1])
+#     b_reverse = int(b[::-1])
+#
+#     if a_reverse > b_reverse:
+#         return print(a_reverse)
+#     else:
+#         return print(b_reverse)
+
+#----다이얼
 def solution():
 
-    a, b = input().split()
+    time_arr = [0] * 10
+    alpha_dict = {1: '0', 2 : 'ABC', 3: 'DEF', 4: 'GHI', 5: 'JKL', 6: 'MNO', 7 : 'PQRS', 8: 'TUV', 9: 'WXYZ', 10: '9'}
 
-    a_reverse = int(a[::-1])
-    b_reverse = int(b[::-1])
+    result = 0
 
-    if a_reverse > b_reverse:
-        return print(a_reverse)
-    else:
-        return print(b_reverse)
+    for i in range(2, len(time_arr)+2):
+        time_arr[i-2] = i
 
+    print(time_arr)
+    s = input().upper()
+
+    if len(s) < 2 or len(s) > 15:
+        return
+
+    for alpha in s:
+        for key, value in alpha_dict.items():
+            if alpha in value:
+                result += time_arr[key - 1]
+    print(result)
 solution()
-
-
 
