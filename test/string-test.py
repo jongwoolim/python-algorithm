@@ -114,12 +114,32 @@
 #     print(result)
 
 #---- 크로아티아 알파벳
-def solution():
-    arr = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+# def solution():
+#     arr = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+#
+#     alpha = input()
+#     for v in arr:
+#         alpha = alpha.replace(v, '*')
+#     print(len(alpha))
 
-    alpha = input()
-    for v in arr:
-        alpha = alpha.replace(v, '*')
-    print(len(alpha))
-solution()
+# def solution():
+#
+#     n = int(input())
+#     count = 0
+#     if n < 1 or n > 100:
+#         return
+#
+#     for _ in range(n):
+#         word = list(input().lower().split())
+#
+#         while len(word) > 0:
+#             s = word.pop()
+
+# def solution():
+#
+#
+#
+#
+# solution()
+
 
