@@ -26,6 +26,3 @@ if __name__ == '__main__':
     visited = [False]*9
 
 dfs(graph, 1, visited)
-
-    
-    
