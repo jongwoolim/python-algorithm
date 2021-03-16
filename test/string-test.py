@@ -135,11 +135,42 @@
 #         while len(word) > 0:
 #             s = word.pop()
 
-# def solution():
-#
-#
-#
-#
-# solution()
+#---- 그룹 단어 체
+def solution():
+# ccazzzbb는 c,a,z,b 모두 연속해서 나타나서 그룹 단어
+# aabbbccb는 b가 떨어져서 그룹 단어가 아니다
+# a~z 리스트 만든다
+# 문자열을 하나씩 돌면서 카운트한다
+# 해당 문자열이 전 문자열과 같으면 카운트, 같지 않고  알파벳 카운트가 0이상이그룹단어 x
+    n = int(input())
+    words = []
+    alpha_count = [0] * 26
+    result = 0
+
+    for _ in range(n):
+        word = input()
+        words.append(word)
+
+    for w in words:
+        group_checked = True
+        for i in range(len(w)):
+            if i > 0:
+                if w[i] == w[i - 1]:
+                    alpha_count[ord(w[i]) - 97] += 1
+                else:
+                    if alpha_count[ord(w[i]) - 97] > 0:
+                        group_checked = False
+                        break
+
+            alpha_count[ord(w[i]) - 97] += 1
+
+        if group_checked:
+            result += 1
+        # alpha_count.clear()
+        del alpha_count[:]
+        alpha_count = [0] * 26
+    print(result)
+
+solution()
 
 
