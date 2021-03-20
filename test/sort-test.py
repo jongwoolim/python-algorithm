@@ -30,11 +30,17 @@ import heapq
 #     print(v)
 
 #---- 수 정렬하기3
-import sys
-input = sys.stdin.readline
-m=10001;l=[0]*m
-for _ in range(int(input())):l[int(input())]+=1
-for i in range(1,m):print(f"{i}\n"*l[i],end="")
+# import sys
+# input = sys.stdin.readline
+# m=10001;l=[0]*m
+# for _ in range(int(input())):l[int(input())]+=1
+# for i in range(1,m):print(f"{i}\n"*l[i],end="")
+#---- 수 정렬하기4
+num_list = list(map(int, input()))
+num_list.sort(reverse=True)
+print(''.join(str(v) for v in num_list))
+
+
 
 
 
