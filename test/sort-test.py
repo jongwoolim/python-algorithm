@@ -36,9 +36,23 @@ import heapq
 # for _ in range(int(input())):l[int(input())]+=1
 # for i in range(1,m):print(f"{i}\n"*l[i],end="")
 #---- 수 정렬하기4
-num_list = list(map(int, input()))
-num_list.sort(reverse=True)
-print(''.join(str(v) for v in num_list))
+# num_list = list(map(int, input()))
+# num_list.sort(reverse=True)
+# print(''.join(str(v) for v in num_list))
+
+#---- 좌표 정렬하기
+n = int(input())
+
+arr = []
+
+for _ in range(n):
+    x, y = map(int, input().split())
+    arr.append((x, y))
+arr.sort(key=lambda v: (v[0], v[1]))
+
+for x, y in arr:
+    print(x,y)
+
 
 
 
