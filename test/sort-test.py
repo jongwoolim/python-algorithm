@@ -41,6 +41,19 @@ import heapq
 # print(''.join(str(v) for v in num_list))
 
 #---- 좌표 정렬하기
+# n = int(input())
+#
+# arr = []
+#
+# for _ in range(n):
+#     x, y = map(int, input().split())
+#     arr.append((x, y))
+# arr.sort(key=lambda v: (v[0], v[1]))
+#
+# for x, y in arr:
+#     print(x,y)
+
+#---- 좌표 정렬하기2
 n = int(input())
 
 arr = []
@@ -48,10 +61,11 @@ arr = []
 for _ in range(n):
     x, y = map(int, input().split())
     arr.append((x, y))
-arr.sort(key=lambda v: (v[0], v[1]))
+arr.sort(key=lambda v: (v[1], v[0]))
 
 for x, y in arr:
     print(x,y)
+
 
 
 
