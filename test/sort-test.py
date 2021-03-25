@@ -54,17 +54,43 @@ import heapq
 #     print(x,y)
 
 #---- 좌표 정렬하기2
+# n = int(input())
+#
+# arr = []
+#
+# for _ in range(n):
+#     x, y = map(int, input().split())
+#     arr.append((x, y))
+# arr.sort(key=lambda v: (v[1], v[0]))
+#
+# for x, y in arr:
+#     print(x,y)
+
+#---- 단어 정렬
 n = int(input())
+word_list = []
+result = []
+def solution():
+    for _ in range(n):
+        word = input().lower()
+        if len(word) > 50:
+            return
+        word_list.append(word)
+    word_list.sort(key=lambda w: (len(w), w))
 
-arr = []
+    for word in word_list:
+        if word not in result:
+            result.append(word)
 
-for _ in range(n):
-    x, y = map(int, input().split())
-    arr.append((x, y))
-arr.sort(key=lambda v: (v[1], v[0]))
+    for word in result:
+        print(word)
 
-for x, y in arr:
-    print(x,y)
+solution()
+
+
+
+
+
 
 
 
