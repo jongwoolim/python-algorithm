@@ -67,24 +67,39 @@ import heapq
 #     print(x,y)
 
 #---- 단어 정렬
-n = int(input())
-word_list = []
-result = []
+# n = int(input())
+# word_list = []
+# result = []
+# def solution():
+#     for _ in range(n):
+#         word = input().lower()
+#         if len(word) > 50:
+#             return
+#         word_list.append(word)
+#     word_list.sort(key=lambda w: (len(w), w))
+#
+#     for word in word_list:
+#         if word not in result:
+#             result.append(word)
+#
+#     for word in result:
+#         print(word)
+#
+# solution()
+
+#---- 나이순 정렬
 def solution():
-    for _ in range(n):
-        word = input().lower()
-        if len(word) > 50:
-            return
-        word_list.append(word)
-    word_list.sort(key=lambda w: (len(w), w))
 
-    for word in word_list:
-        if word not in result:
-            result.append(word)
+    n = int(input())
+    user_arr = []
+    for idx in range(n):
+        age, name = input().split()
+        user_arr.append((int(age), name, idx))
 
-    for word in result:
-        print(word)
+    user_arr.sort(key=lambda x: (x[0], x[2]))
 
+    for v in user_arr:
+        print(v[0], v[1])
 solution()
 
 
